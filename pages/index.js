@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { uiActions } from '../store/uiSlice'
+import Script from 'next/script'
 
 export default function Home() {
   const router = useRouter()
@@ -16,10 +17,23 @@ export default function Home() {
     }
   }, [router])
   return (
-    <Container>
-      <UsersContainer />
-      <MessagesContainer/>
-    </Container>
+    <>
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `
+                document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01+'px');
+                window.addEventListener('resize', () => {
+                  document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01+'px');
+                });
+                window.localStorage.setItem('currentUser','1');
+          `,
+        }}
+      ></Script>
+      <Container>
+        <UsersContainer />
+        <MessagesContainer />
+      </Container>
+    </>
   )
 }
 

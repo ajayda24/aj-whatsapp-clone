@@ -34,11 +34,12 @@ export default SearchFunc
 
 const SearchDiv = styled.div`
   height: 10vh;
-  background-color: ${(props) => (props.clicked==1 ? 'white' : '#f6f6f6')};
+  height: calc(var(--vh, 1vh) * 10);
+  background-color: ${(props) => (props.clicked == 1 ? 'white' : '#f6f6f6')};
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .1s;
+  transition: all 0.1s;
 `
 
 const InputStyled = styled(Input)`

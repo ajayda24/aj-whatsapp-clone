@@ -86,6 +86,7 @@ export default NewChatFunc
 const SearchDiv = styled.div`
   width: 100%;
   height: 10vh;
+  height: calc(var(--vh, 1vh) * 10);
   background-color: #f6f6f6;
   display: flex;
   justify-content: center;

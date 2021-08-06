@@ -93,4 +93,5 @@ const Caption = styled.div`
   text-align: center;
   margin: auto;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 `

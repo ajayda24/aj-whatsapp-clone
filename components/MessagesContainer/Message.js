@@ -32,6 +32,7 @@ export default MessageFunc
 const MessageDiv = styled.div`
   width: 100%;
   height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   display: flex;
   flex-direction: column;
   padding: 1rem;

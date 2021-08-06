@@ -36,6 +36,7 @@ const Header = styled.div`
   margin: auto;
   background-color: #ededed;
   height: 10vh;
+  height: calc(var(--vh, 1vh) * 10);
   display: flex;
   align-items: center;
   justify-content: flex-start;

@@ -63,6 +63,7 @@ const UsersDiv = styled.div`
   width: 100%;
   background-color: #fff;
   height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   overflow-y: scroll;
 
   @media ${device.tablet} {
@@ -81,6 +82,7 @@ const UsersDiv = styled.div`
 const User = styled.div`
   width: 100%;
   height: 12vh;
+  height: calc(var(--vh, 1vh) * 12);
   background-color: #fff;
   display: flex;
   /* justify-content: center; */
@@ -97,6 +99,7 @@ const User = styled.div`
 const UserDetails = styled.div`
   width: 80%;
   height: 9.5vh;
+  height: calc(var(--vh, 1vh) * 9.5);
   display: flex;
   justify-content: center;
   flex-direction: column;
